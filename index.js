@@ -93,4 +93,4 @@ const C15={
     duración: 4.55
 }
 
-console.log(C1);
+console.log
