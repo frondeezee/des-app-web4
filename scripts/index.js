@@ -38,11 +38,10 @@ const C6={
     duración: '3.36'
 }
 const C7={
-    nombre: 'Change Your Mind';
-    artista: 'Sunlounger Feat. Kyler England';
-    álbum: 'The Annual Compilation 2010';
-    duración: 4.05;
-    url:
+    nombre: 'Change Your Mind',
+    artista: 'Sunlounger Feat. Kyler England',
+    álbum: 'The Annual Compilation 2010',
+    duración: '4.05'
 }
 const C8={
     nombre: 'Man On The Run',
