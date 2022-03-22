@@ -108,6 +108,7 @@ const canciones=[
     image: 'images/The Annual Compilation 2010.jpg'
 }
 ]
+
 class Reproductor {
     constructor(enReproducción, ahoraSuena){
         this.enReproducción = enReproducción;
@@ -126,9 +127,10 @@ class Reproductor {
     }
 
     shuffle(){
-        suf = Math.floor(Math.random()*canciones.length);
-        this.ahoraSuena = `${canciones[suf]}`
-        return this.ahoraSuena;
+        /*this.ahoraSuena = Math.floor(Math.random()*canciones.length);
+    */
+    this.ahoraSuena = Math.floor(Math.random()*canciones.length);
+    return this.ahoraSuena;
     }
 
     next(){
@@ -160,6 +162,13 @@ class Reproductor {
             console.log('No existe ninguna canción seleccionada')
         }
     }
+
+    sss(){
+        console.log ('huauu');
+    }
 }
 
-console.log(Reproductor.shuffle);
+const one = new Reproductor();
+
+one.shuffle();
+console.log(one.shuffle());
