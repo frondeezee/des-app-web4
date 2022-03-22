@@ -108,4 +108,58 @@ const canciones=[
     image: 'images/The Annual Compilation 2010.jpg'
 }
 ]
-console.log(C1)
+class Reproductor {
+    constructor(enReproducción, ahoraSuena){
+        this.enReproducción = enReproducción;
+        this.ahoraSuena = ahoraSuena;
+    }
+
+    playPause(){
+        if(this.enReproducción === true){
+            this.enReproducción === false;
+            console.log(`Ahora suena: ${this.enReproducción}`)
+        }else{
+            this.enReproducción === true;
+            console.log(`Ahora suena: ${this.enReproducción}`)
+
+        }
+    }
+
+    shuffle(){
+        suf = Math.floor(Math.random()*canciones.length);
+        this.ahoraSuena = `${canciones[suf]}`
+        return this.ahoraSuena;
+    }
+
+    next(){
+        this.ahoraSuena += 1;
+        }
+
+    prev(){
+        this.ahoraSuena -= 1;
+    }
+
+    stop(){
+        console.log('Haz detenido la reproducción')
+        this.ahoraSuena === -1
+    }
+
+    play(canciones){
+        this.ahoraSuena === canciones;
+    }
+
+    songsList(){
+        for(let i=play(canciones); i<=15; i++){
+        console.log(i)
+        }
+    }
+
+    showSongInSite(){
+        console.log(this.ahoraSuena)
+        if(this.ahoraSuena === -1){
+            console.log('No existe ninguna canción seleccionada')
+        }
+    }
+}
+
+console.log(Reproductor.shuffle);
