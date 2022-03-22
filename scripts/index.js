@@ -113,29 +113,28 @@ class Reproductor {
     constructor(enReproducción, ahoraSuena){
         this.enReproducción = enReproducción;
         this.ahoraSuena = ahoraSuena;
+
+        this.ahoraSuena = 0;
     }
 
-    playPause(){
+    playPause(){  
         if(this.enReproducción === true){
             this.enReproducción === false;
-            console.log(`Ahora suena: ${this.enReproducción}`)
+            console.log(`Haz pausado la reproducción`)
         }else{
             this.enReproducción === true;
-            console.log(`Ahora suena: ${this.enReproducción}`)
-
+            console.log(`Ahora suena: ${'NOMBRE DE LA CANCIÓN'}`)
         }
     }
 
-    shuffle(){
-        /*this.ahoraSuena = Math.floor(Math.random()*canciones.length);
-    */
+    shuffle(){ 
     this.ahoraSuena = Math.floor(Math.random()*canciones.length);
     return this.ahoraSuena;
     }
 
     next(){
-        this.ahoraSuena += 1;
-        }
+             
+    }
 
     prev(){
         this.ahoraSuena -= 1;
@@ -162,13 +161,12 @@ class Reproductor {
             console.log('No existe ninguna canción seleccionada')
         }
     }
-
-    sss(){
-        console.log ('huauu');
-    }
 }
 
 const one = new Reproductor();
 
 one.shuffle();
 console.log(one.shuffle());
+one.playPause();
+one.next();
+console.log(one.next());
