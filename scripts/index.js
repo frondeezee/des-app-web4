@@ -113,6 +113,7 @@ class Reproductor {
     constructor(enReproducción, ahoraSuena){
         this.enReproducción = enReproducción;
         this.ahoraSuena = ahoraSuena;
+        ahoraSuena = 0;
         
     }
 
@@ -122,7 +123,7 @@ class Reproductor {
             console.log(`Haz pausado la reproducción`)
         }else{
             this.enReproducción === true;
-            console.log(`Ahora suena: ${'NOMBRE DE LA CANCIÓN'}`)
+            console.log(`Ahora suena: "${canciones[this.ahoraSuena].nombre}"`)
         }
     }
 
@@ -131,17 +132,17 @@ class Reproductor {
     return this.ahoraSuena;
     }
 
-    next(canciones){
-        if (this.ahoraSuena) {
-            this.ahoraSuena++
-            console.log(this.ahoraSuena)
-        }
+    next(){
+        
+        console.log(this.showSongInSite())
+
     }
 
     prev(){
+        let suma = 0
         if (this.ahoraSuena) {
-            this.ahoraSuena--
-            console.log(this.ahoraSuena)
+            suma--
+            console.log(suma)
         }
     }
 
@@ -160,7 +161,6 @@ class Reproductor {
     }
 
     showSongInSite(){
-        this.enReproducciónahoraSuena === canciones
         if(this.ahoraSuena === -1){
             console.log('No existe ninguna canción seleccionada')
         }else{
@@ -171,8 +171,7 @@ class Reproductor {
 
 const one = new Reproductor();
 
-one.shuffle();
-console.log(one.shuffle());
+console.log(one.shuffle())
 one.playPause();
 one.next();
 one.next();
@@ -182,6 +181,7 @@ one.stop();
 one.play();
 one.showSongInSite();
 
+console.log(canciones[1].nombre)
 
 
 
