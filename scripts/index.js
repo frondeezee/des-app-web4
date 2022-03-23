@@ -2,7 +2,7 @@
 
 const canciones=[
     C1={
-    nombre: 'Walking With You',
+    nombre: '01 Walking With You',
     artista:'Ivan Mateluna',
     álbum: 'The Annual Compilation 2010',
     duración: 4.08,
@@ -10,98 +10,98 @@ const canciones=[
 },
 
     C2={
-    nombre: 'Lonely Girl',
+    nombre: '02 Lonely Girl',
     artista: 'Oceanlab',
     álbum: 'The Annual Compilation 2010',
     duración: 3.56,
     image: 'images/The Annual Compilation 2010.jpg'
 },
     C3={
-    nombre: 'We Belong',
+    nombre: '03 We Belong',
     artista: 'Ferry Corsten',
     álbum: 'The Annual Compilation 2010',
     duración: 2.55,
     image: 'images/The Annual Compilation 2010.jpg'
 },
     C4={
-    nombre: 'Coma Aid',
+    nombre: '04 Coma Aid',
     artista: 'Marco V',
     álbum: 'The Annual Compilation 2010',
     duración: 4.02,
     image: 'images/The Annual Compilation 2010.jpg'
 },
     C5={
-    nombre: 'Dont Wake Me Up',
+    nombre: '05 Dont Wake Me Up',
     artista: 'Dj Shah Feat. Inger Hansen',
     álbum: 'The Annual Compilation 2010',
     duración: 3.53,
     image: 'images/The Annual Compilation 2010.jpg'
 },
     C6={
-    nombre: 'Never Say Never',
+    nombre: '06 Never Say Never',
     artista: 'Armin Van Buuren Feat. Jacqueline Govaert',
     álbum: 'The Annual Compilation 2010',
     duración: 3.36,
     image: 'images/The Annual Compilation 2010.jpg'
 },
     C7={
-    nombre: 'Change Your Mind',
+    nombre: '07 Change Your Mind',
     artista: 'Sunlounger Feat. Kyler England',
     álbum: 'The Annual Compilation 2010',
     duración: 4.05,
     image: 'images/The Annual Compilation 2010.jpg'
 },
     C8={
-    nombre: 'Man On The Run',
+    nombre: '08 Man On The Run',
     artista: 'Dash Berlin With Cerf, Mitiska & Jaren',
     álbum: 'The Annual Compilation 2010',
     duración: 3.25,
     image: 'images/The Annual Compilation 2010.jpg'
 },
     C9={
-    nombre: 'Lost',
+    nombre: '09 Lost',
     artista: 'Sunlounger Feat. Zara',
     álbum: 'The Annual Compilation 2010',
     duración: 3.51,
     image: 'images/The Annual Compilation 2010.jpg'
 },
     C10={
-    nombre: 'L.A. Nights',
+    nombre: '10 L.A. Nights',
     artista: 'Atb',
     álbum: 'The Annual Compilation 2010',
     duración: 4.17,
     image: 'images/The Annual Compilation 2010.jpg'
 },
     C11={
-    nombre: 'Made Of Love',
+    nombre: '11 Made Of Love',
     artista: 'Ferry Corsten Feat. Betsy Larkin',
     álbum: 'The Annual Compilation 2010',
     duración: 3.47,
     image: 'images/The Annual Compilation 2010.jpg'
 },
     C12={
-    nombre: 'Find Yourself',
+    nombre: '12 Find Yourself',
     artista: 'John OCallaghan Feat. Sarah Howells',
     álbum: 'The Annual Compilation 2010',
     duración: 3.33,
     image: 'images/The Annual Compilation 2010.jpg'
 },
     C13={
-    nombre: 'To The Sky',
+    nombre: '13 To The Sky',
     artista: 'Roger Shah Feat. Chris Jones',
     álbum: 'The Annual Compilation 2010',
     duración: 3.33,
     image: 'images/The Annual Compilation 2010.jpg'
 },
     C14={
-    nombre: 'The New World',
+    nombre: '14 The New World',
     artista: 'Markus Schulz',
     álbum: 'The Annual Compilation 2010',
     duración: 3.19,
     image: 'images/The Annual Compilation 2010.jpg'
 },
     C15={
-    nombre: 'In And Out Of Love',
+    nombre: '15 In And Out Of Love',
     artista: 'Armin Van Buuren Feat. Sharon Den Adel',
     álbum: 'The Annual Compilation 2010',
     duración: 4.55,
@@ -113,8 +113,7 @@ class Reproductor {
     constructor(enReproducción, ahoraSuena){
         this.enReproducción = enReproducción;
         this.ahoraSuena = ahoraSuena;
-
-        this.ahoraSuena = 0;
+        
     }
 
     playPause(){  
@@ -132,12 +131,18 @@ class Reproductor {
     return this.ahoraSuena;
     }
 
-    next(){
-             
+    next(canciones){
+        if (this.ahoraSuena) {
+            this.ahoraSuena++
+            console.log(this.ahoraSuena)
+        }
     }
 
     prev(){
-        this.ahoraSuena -= 1;
+        if (this.ahoraSuena) {
+            this.ahoraSuena--
+            console.log(this.ahoraSuena)
+        }
     }
 
     stop(){
@@ -146,7 +151,8 @@ class Reproductor {
     }
 
     play(canciones){
-        this.ahoraSuena === canciones;
+        this.ahoraSuena;
+        console.log(this.ahoraSuena)
     }
 
     songsList(){
@@ -169,4 +175,23 @@ one.shuffle();
 console.log(one.shuffle());
 one.playPause();
 one.next();
-console.log(one.next());
+one.next();
+one.prev();
+one.prev();
+one.stop();
+one.play();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
