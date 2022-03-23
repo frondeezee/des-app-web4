@@ -151,14 +151,12 @@ class Reproductor {
     }
 
     play(canciones){
-        this.ahoraSuena;
+        this.ahoraSuena
         console.log(this.ahoraSuena)
     }
 
     songsList(){
-        for(let i=play(canciones); i<=15; i++){
-        console.log(i)
-        }
+       
     }
 
     showSongInSite(){
@@ -180,9 +178,6 @@ one.prev();
 one.prev();
 one.stop();
 one.play();
-
-
-
 
 
 
