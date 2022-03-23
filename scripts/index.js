@@ -113,11 +113,13 @@ class Reproductor {
     constructor(enReproducción, ahoraSuena){
         this.enReproducción = enReproducción;
         this.ahoraSuena = ahoraSuena;
-        ahoraSuena = 0;
         
+        enReproducción = canciones
+        ahoraSuena = 0;
     }
 
-    playPause(){  
+    playPause(){ 
+        this.enReproducción
         if(this.enReproducción === true){
             this.enReproducción === false;
             console.log(`Haz pausado la reproducción`)
@@ -128,8 +130,9 @@ class Reproductor {
     }
 
     shuffle(){ 
-    this.ahoraSuena = Math.floor(Math.random()*canciones.length);
+    this.ahoraSuena = Math.floor(Math.random()*canciones.length);   
     return this.ahoraSuena;
+
     }
 
     next(){
@@ -171,7 +174,7 @@ class Reproductor {
 
 const one = new Reproductor();
 
-console.log(one.shuffle())
+one.shuffle();
 one.playPause();
 one.next();
 one.next();
@@ -181,7 +184,7 @@ one.stop();
 one.play();
 one.showSongInSite();
 
-console.log(canciones[1].nombre)
+// console.log(canciones[1].nombre)
 
 
 
