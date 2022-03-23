@@ -132,7 +132,6 @@ class Reproductor {
     shuffle(){ 
     this.ahoraSuena = Math.floor(Math.random()*canciones.length);   
     return this.ahoraSuena;
-
     }
 
     next(){
@@ -147,23 +146,24 @@ class Reproductor {
 
     stop(){
         console.log('Haz detenido la reproducción')
-        this.ahoraSuena === -1
+        this.showSongInSite()===0   
     }
 
     play(canciones){
         this.ahoraSuena
-        console.log(this.ahoraSuena)
+        console.log(this.showSongInSite())
     }
 
     songsList(){
-    
+            this.play++
+            return console.log(this.showSongInSite())
     }
 
     showSongInSite(){
         if(this.ahoraSuena === -1){
             console.log('No existe ninguna canción seleccionada')
         }else{
-            console.log(canciones[this.ahoraSuena])
+            console.log(canciones[this.ahoraSuena])    
         }
     }
 }
@@ -178,6 +178,7 @@ one.prev();
 one.prev();
 one.stop();
 one.play();
+one.songsList();
 one.showSongInSite();
 
 // console.log(canciones[1].nombre)
