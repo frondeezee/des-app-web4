@@ -115,7 +115,7 @@ class Reproductor {
         this.ahoraSuena = ahoraSuena;
         
         enReproducción = canciones
-        ahoraSuena = 0;
+        ahoraSuena = canciones;
     }
 
     playPause(){ 
@@ -136,17 +136,13 @@ class Reproductor {
     }
 
     next(){
-        
-        console.log(this.showSongInSite())
-
+        this.ahoraSuena+=1
+        return console.log(this.showSongInSite())
     }
 
     prev(){
-        let suma = 0
-        if (this.ahoraSuena) {
-            suma--
-            console.log(suma)
-        }
+            this.ahoraSuena-=1
+            return console.log(this.showSongInSite())
     }
 
     stop(){
