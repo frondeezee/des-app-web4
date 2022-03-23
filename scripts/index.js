@@ -156,13 +156,15 @@ class Reproductor {
     }
 
     songsList(){
-       
+    
     }
 
     showSongInSite(){
-        console.log(this.ahoraSuena)
+        this.enReproducciónahoraSuena === canciones
         if(this.ahoraSuena === -1){
             console.log('No existe ninguna canción seleccionada')
+        }else{
+            console.log(canciones[this.ahoraSuena])
         }
     }
 }
@@ -178,8 +180,7 @@ one.prev();
 one.prev();
 one.stop();
 one.play();
-
-
+one.showSongInSite();
 
 
 
