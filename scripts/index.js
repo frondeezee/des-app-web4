@@ -135,13 +135,21 @@ class Reproductor {
     }
 
     next(){
-        this.ahoraSuena+=1
-        return console.log(this.showSongInSite())
+        if (this.ahoraSuena <14) {
+            this.ahoraSuena+=1
+            return console.log(this.showSongInSite())
+        }else{
+            false
+        }
     }
 
     prev(){
-            this.ahoraSuena-=1
-            return console.log(this.showSongInSite())
+            if (this.ahoraSuena >0) {
+                this.ahoraSuena-=1
+                return console.log(this.showSongInSite())
+            }else{
+                false
+            }
     }
 
     stop(){
@@ -180,18 +188,9 @@ one.prev();
 one.stop();
 one.play();
 one.songsList();*/
-one.showSongInSite();
+
 
 // console.log(canciones[1].nombre)
-
-function doc(){
-    document.getElementById('canciones').innerHTML = one.shuffle();
-}
-doc();
-
-
-
-
 
 
 
