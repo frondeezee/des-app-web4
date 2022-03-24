@@ -166,22 +166,30 @@ class Reproductor {
             console.log(canciones[this.ahoraSuena])    
         }
     }
+
 }
 
 const one = new Reproductor();
 
 one.shuffle();
-one.playPause();
+/*one.playPause();
 one.next();
 one.next();
 one.prev();
 one.prev();
 one.stop();
 one.play();
-one.songsList();
+one.songsList();*/
 one.showSongInSite();
 
 // console.log(canciones[1].nombre)
+
+function doc(){
+    document.getElementById('canciones').innerHTML = one.shuffle();
+}
+doc();
+
+
 
 
 
