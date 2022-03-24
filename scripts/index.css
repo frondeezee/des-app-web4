@@ -1,0 +1,33 @@
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    color: rgba(0, 255, 255, 0.68);
+    background-color: rgb(0, 0, 0);
+}
+
+.tex {
+    color: rgba(0, 255, 255, 0.399);
+}
+
+.music {
+    padding: 0;
+}
+
+.music li{
+    color: rgba(0, 255, 255, 0.666);
+}
+
+.flex ul {
+    padding: 0;
+}
+
+.flex li {
+    display: inline;
+    font-size: 16px;
+    text-decoration: none;
+    float:inline-end;
+    padding: 10px;
+    background-color: rgba(6, 126, 128, 0.742);
+    color: rgb(255, 255, 255);
+}
